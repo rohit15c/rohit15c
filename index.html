@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Birthday Wishes</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Teko:700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+</head>
+
+<body>
+    <div id="a"></div>
+    <div id="back">
+        <h1>
+            <span>Happy</span>
+            <span>Birthday</span><br />
+            <div class="bname">Sakshin<span id=""></span>
+            </div>
+        </h1>
+        <div id="loadingtext">
+            <div id="loading" class="loading"></div>
+        </div>
+        <div id="messagetext">
+            <div id="message" class="message"></div>
+        </div>
+        <button id="bringcake">Prepare Cake</button>
+        <div id="cake"></div>
+        <div class="star-1 stars"></div>
+        <div class="star-2 stars"></div>
+        <div class="star-3 stars"></div>
+        <div class="balls1" id="ball1"></div>
+        <div class="balls1" id="ball2"></div>
+        <div class="balls2" id="red"></div>
+        <div class="balls2" id="blue"></div>
+        <div class="balls2" id="green"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        let params = new URLSearchParams(location.search);
+        var name = params.get('name');
+        $(document).ready(function () {
+            $('#bname').html(name);
+            setTimeout(function () {
+                $('#bringcake').trigger('click');
+            }, 2000);
+        });
+
+        var cake = `<div class="container">
+            <div class="body-1"></div>
+            <div class="top-1"></div>
+            <div class="top-2"></div>
+            <div class="top-3"></div>
+            <div class="top-4"></div>
+            <div class="top-5"></div>
+            <div class="top-6"></div>
+            <div id ="candles" class="candles">
+            </div> 
+            <div id ="light" class="light">
+            </div>
+            <div class="hearts">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+            </div>
+            <div class="icing-1">
+                <div class="icing1">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="icing2">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="Rose">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="top-7"></div>
+                <div class="stem"></div>
+            </div>
+            <div class="dripping">
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+                <div class="drip1"></div>
+            </div>
+            <div class="plate"></div>
+            <div class="shadow"></div>
+        </div>`;
+        $('#bringcake').click(function () {
+            $('#bringcake').hide();
+            $('#loading').html(`Cake 🥮 is On the Way,<br /> Best things take time ⌛`);
+            setTimeout(function () {
+                $('#cake').html(cake);
+            }, 3000);
+            setTimeout(function () {
+                $('#loading').html('');
+            }, 5000);
+            setTimeout(function () {
+                $('#loading').html('Adding Candles to Cake 🎂');
+            }, 6600);
+            var cd = `<div class="candle">`;
+            setTimeout(function () {
+                $('#candles').append(cd);
+            }, 7100);
+            setTimeout(function () {
+                $('#candles').append(cd);
+            }, 7600);
+            setTimeout(function () {
+                $('#candles').append(cd);
+            }, 8100);
+            setTimeout(function () {
+                $('#candles').append(cd);
+            }, 8600);
+            setTimeout(function () {
+                $('#candles').append(cd);
+            }, 9100);
+            setTimeout(function () {
+                $('#candles').append(cd);
+            }, 9600);
+            setTimeout(function () {
+                $('#loading').html(`Lighting candles`);
+                $('#message').html(
+                    `Let’s light the candles and celebrate this special day of your life. Happy birthday Sakshin😍.`
+                );
+            }, 9800);
+            var lc = `<div class="fire"></div>`;
+            setTimeout(function () {
+                $('#light').append(lc);
+            }, 10700);
+            setTimeout(function () {
+                $('#light').append(lc);
+            }, 11200);
+            setTimeout(function () {
+                $('#light').append(lc);
+            }, 11700);
+            setTimeout(function () {
+                $('#light').append(lc);
+            }, 12200);
+            setTimeout(function () {
+                $('#light').append(lc);
+            }, 12700);
+            setTimeout(function () {
+                $('#light').append(lc);
+            }, 13200);
+            setTimeout(function () {
+                $('#loading').html('');
+                $('#message').html('');
+                $('#message').html(`Don’t ever change! Stay as amazing as you are, my friend😊`);
+            }, 14000);
+            setTimeout(function () {
+                $('#message').html('');
+                $('#message').html(`I hope your special day will bring you lots of happiness, love, and fun. You deserve
+            them a lot. Enjoy🤗`);
+            }, 17000);
+            setTimeout(function () {
+                $('#green').hide();
+                $('#blue').hide();
+                $('#red').hide();
+                $('#ball2').hide();
+                $('#ball1').hide();
+                $('#cake').hide();
+                $('#bringcake').hide();
+                $('#message').hide();
+                $('#messagetext').hide();
+                $('#loading').hide();
+                $('#loadingtext').hide();
+                $('#bname').hide();
+                $('#back').hide();
+                $('#a').html(`<button id="lg" onclick="location.reload();">Load Again</button>`);
+            }, 19000);
+        });
+    </script>
+</body>
+
+</html>
